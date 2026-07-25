@@ -1,3 +1,4 @@
+/* @font-face importa fontes localizadas no "assets/fonts" para que possam ser usadas no projeto normalmente */
 @font-face {
     font-family: "Righteous";
     src: url("assets/fonts/Righteous-Regular.ttf") format("truetype");
@@ -26,19 +27,20 @@
 }
 
 body{
-
+    /* Define a fonte "Sansation-Regular" como a base de todo o projeto. o background aqui define a cor de fundo, aquela que ficará atrás das sections. */
     font-family: "Sansation-Regular", sans-serif;
     background:linear-gradient(to right, #fefae0 0%, #E9EDC9 100% );
     font-size: large;
    
 }
 
+/* Aqui é definido que todos os títulos e subtítulos utilizarão fontes diferentes da base. */
 h1{
     font-family: "Righteous", sans-serif;
 }
- h2{
+h2{
     font-family: "Sansation-Bold", sans-serif;
- }
+}
 section{
     width: 100%;
 }

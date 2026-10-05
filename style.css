@@ -1,4 +1,5 @@
-/* @font-face importa fontes localizadas no "assets/fonts" para que possam ser usadas no projeto normalmente */
+/* fontes */
+
 @font-face {
     font-family: "Righteous";
     src: url("assets/fonts/Righteous-Regular.ttf") format("truetype");
@@ -20,114 +21,113 @@
     font-style: normal;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    /* Define a fonte "Sansation-Regular" como a base de todo o projeto. o background aqui define a cor de fundo, aquela que ficará atrás das sections. */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     font-family: "Sansation-Regular", sans-serif;
-    background:linear-gradient(135deg, #fefae0 0%, #E9EDC9 100% );
-    font-size: large;
-   
+    background: linear-gradient(135deg, #fefae0 0%, #E9EDC9 100%);
+    font-size: 18px;
+    overflow-x: hidden;
 }
 
-/* Aqui é definido que todos os títulos e subtítulos utilizarão fontes diferentes da base. */
-h1{
+h1 {
     font-family: "Righteous", sans-serif;
 }
-h2{
+
+h2 {
     font-family: "Sansation-Bold", sans-serif;
 }
-section{
+
+section {
     width: 100%;
 }
 
-/* navegação */
 
-header{
+/* header */
 
-    width:100%;
+header {
+    width: 100%;
+    background: linear-gradient(135deg, #283618 0%, #606c38 100%);
 
-    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    background:linear-gradient(135deg, #283618 0%, #606c38 100%);
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:15px 40px;
+    padding: 15px 40px;
 
     color: #fefae0;
 }
 
-.logo{
-    display: flex; 
+.logo {
+    display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.logo img{
-    width: 45px;
-    height: 45px;
-}
-
-.logo h1{
+.logo h1 {
     margin: 0;
     font-family: "Righteous", sans-serif;
 }
 
-nav{
-
-    display:flex;
-    gap:40px;
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
 }
 
-nav a{
+nav {
+    display: flex;
+    gap: 40px;
+}
 
-    text-decoration:none;
+nav a {
+    text-decoration: none;
     color: #fefae0;
+    transition: 0.3s;
 }
 
-nav a:hover{
-
-    color:#606c38;
+nav a:hover {
+    color: #d4a373;
 }
 
 
 /* parte 1 */
 
-.Main{
+.Main {
+    min-height: 500px;
 
-    display:flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    align-items:center;
+    padding: 60px;
+    gap: 100px;
 
-    justify-content:space-around;
-
-    padding:60px;
-
-    gap:30px;
-
-    text-align:  justify;
-
+    text-align: justify;
 }
 
-.Main img{
+.Main img {
+    width: 250px;
+    max-width: 100%;
 
-    width:250px;
+    border-radius: 20px;
 
-    border-radius:20px;
-
-    margin-left: 150px;
+    box-shadow: 0 15px 35px rgba(40, 54, 24, 0.25);
 }
 
-.breveApresentacao{
+.breveApresentacao {
+    width: 100%;
     max-width: 550px;
 
     background: linear-gradient(
@@ -145,52 +145,49 @@ nav a:hover{
     box-shadow: 0 12px 30px rgba(40, 54, 24, 0.25);
 }
 
-.breveApresentacao{
-
-    flex:1;
+.breveApresentacao h2 {
+    margin-bottom: 20px;
 }
 
-.breveApresentacao h2{
-
-    margin-bottom:20px;
-}
-
-.breveApresentacao{
-    max-width: 550px;
-}
-
-.breveApresentacao p{
+.breveApresentacao p {
     text-align: justify;
     text-indent: 2em;
+    line-height: 1.6;
 }
 
 
 /* parte 2 */
 
-.descricao{
+.descricao {
+    min-height: 500px;
 
-    background:linear-gradient(135deg, #283618, #606c38);
+    background: linear-gradient(
+        135deg,
+        #283618,
+        #606c38
+    );
 
-    display:flex;
+    display: flex;
 
-    justify-content:space-between;
+    justify-content: center;
+    align-items: center;
 
-    align-items:center;
+    padding: 60px;
 
-    padding:60px;
-
-    gap: 20px;
+    gap: 100px;
 }
 
+.descricao img {
+    width: 220px;
+    max-width: 100%;
 
-.descricao img{
-    
-    width:220px;
-    border-radius:20px;
-    margin-right: 150px;
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(40, 54, 24, 0.25);
 }
 
-.descricao .texto{
+.descricao .texto {
+    width: 100%;
     max-width: 550px;
 
     background: #FEFAE0;
@@ -204,119 +201,442 @@ nav a:hover{
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
-.descricao p{
+.descricao .texto h2 {
+    margin-bottom: 25px;
+}
+
+.descricao p {
     text-align: justify;
     text-indent: 2em;
-    max-width: 500px;
+    line-height: 1.6;
 }
 
 
+/* download */
 
-/* area de download */
+.download {
+    min-height: 550px;
 
-.download{
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:60px;
-    gap: 300px;
-    text-align: justify;
-
-}
-
-.download img{
-
-    width:250px;
-    border-radius: 20px;
-    margin-left: 20px;
-}
-
-.TitleLogoDownload{
     display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px;
+
+    gap: 180px;
+
+    text-align: center;
+}
+
+.download > img {
+    width: 250px;
+    max-width: 100%;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(40, 54, 24, 0.25);
+}
+
+.downloadText {
+    display: flex;
+
     flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    color: #001427;
+
+    text-align: center;
+
+    gap: 20px;
+}
+
+
+/* Logo + título */
+
+.TitleLogoDownload {
+    display: flex;
+
+    flex-direction: column;
+
     align-items: center;
 }
 
-.TitleLogoDownload h1{
+.TitleLogoDownload h1 {
     margin: 0;
+
     font-family: "Righteous", sans-serif;
+
     font-size: 60px;
+
     line-height: 1;
 }
 
-.linha2{
+.linha2 {
     display: flex;
+
     align-items: center;
-    gap: 2px;
+
+    gap: 5px;
 }
 
-.linha2 img{
+.linha2 img {
     width: 50px;
     height: 50px;
+
+    object-fit: contain;
 }
 
-.downloadText{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    color: #001427;
 
-    text-align:center;
+/* botão */
 
-    gap:20px;
-}
+button {
+    padding: 18px 55px;
 
-.downloadText h1{
-    font-size:60px;
-    font-weight:300;
-    line-height:1.1;
-}
-.downloadText h1{
-    font-size:48px;
-}
+    font-family: "Sansation-Regular", sans-serif;
 
-button{
-
-    padding:18px 55px;
     font-size: 18px;
-    border:none;
-    background:linear-gradient(135deg, #283618, #606c38);
-    color:#fefae0;
-    border-radius:10px;
-    cursor:pointer;
-    transition:.3s;
+
+    border: none;
+
+    background: linear-gradient(
+        135deg,
+        #283618,
+        #606c38
+    );
+
+    color: #fefae0;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
-button:hover{
+button:hover {
+    background: #606c38;
 
-    background:#606c38;
+    transform: translateY(-2px);
 }
+
 
 /* sobre */
 
-.sobre{
+.sobre {
+    background: linear-gradient(
+        135deg,
+        #283618,
+        #606c38
+    );
 
-    background:linear-gradient(135deg, #283618, #606c38);
+    display: flex;
 
-    display:flex;
+    justify-content: center;
+    align-items: center;
 
-    justify-content:space-between;
+    padding: 60px;
 
-    align-items:center;
-
-    padding:60px;
-
-    gap:50px;
+    gap: 60px;
 
     color: #fefae0;
 }
 
-.Main img,
-.descricao img,
-.download > img{
-    box-shadow: 0 15px 35px rgba(40, 54, 24, 0.25);
+.sobre h2 {
+    min-width: 200px;
+}
+
+.sobreTexto {
+    max-width: 700px;
+}
+
+.sobre p {
+    text-align: justify;
+    text-indent: 2em;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
 }
 
 
+/* responsividade tablets */
+
+@media (max-width: 900px) {
+
+    .Main,
+    .descricao {
+        gap: 50px;
+        padding: 50px 30px;
+    }
+
+    .download {
+        gap: 70px;
+        padding: 50px 30px;
+    }
+
+    .sobre {
+        gap: 40px;
+        padding: 50px 30px;
+    }
+}
+
+
+/* responsividade celulares */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 16px;
+    }
+
+
+    /* header */
+
+    header {
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding: 20px;
+
+        gap: 20px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    nav {
+        width: 100%;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 20px;
+
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+
+    /* parte 1 */
+
+    .Main {
+        min-height: auto;
+
+        flex-direction: column;
+
+        padding: 40px 20px;
+
+        gap: 30px;
+    }
+
+    .Main img {
+        width: 100%;
+
+        max-width: 300px;
+
+        margin: 0;
+    }
+
+    .breveApresentacao {
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 30px 25px;
+
+        border-radius: 20px;
+    }
+
+    .breveApresentacao h2 {
+        text-align: center;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* parte 2 */
+
+    .descricao {
+        min-height: auto;
+
+        flex-direction: column-reverse;
+
+        padding: 40px 20px;
+
+        gap: 30px;
+    }
+
+    .descricao img {
+        width: 100%;
+
+        max-width: 300px;
+
+        margin: 0;
+    }
+
+    .descricao .texto {
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 30px 25px;
+
+        border-radius: 20px;
+    }
+
+    .descricao .texto h2 {
+        text-align: center;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* download */
+
+    .download {
+        min-height: auto;
+
+        flex-direction: column;
+
+        padding: 50px 20px;
+
+        gap: 40px;
+    }
+
+    .download > img {
+        width: 100%;
+
+        max-width: 300px;
+
+        margin: 0;
+    }
+
+    .downloadText {
+        width: 100%;
+
+        gap: 18px;
+    }
+
+    .TitleLogoDownload h1 {
+        font-size: 45px;
+    }
+
+    .linha2 {
+        gap: 3px;
+    }
+
+    .linha2 img {
+        width: 40px;
+
+        height: 40px;
+    }
+
+    .downloadText p {
+        font-size: 15px;
+    }
+
+    .downloadText h2 {
+        font-size: 22px;
+    }
+
+    button {
+        width: 100%;
+
+        max-width: 250px;
+
+        padding: 16px 30px;
+    }
+
+
+    /* sobre */
+
+    .sobre {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 40px 25px;
+
+        gap: 25px;
+    }
+
+    .sobre h2 {
+        text-align: center;
+
+        min-width: auto;
+    }
+
+    .sobreTexto {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .sobre p {
+        text-align: justify;
+
+        line-height: 1.6;
+    }
+}
+
+
+/* celulares pequenos */
+
+@media (max-width: 400px) {
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .Main,
+    .descricao,
+    .download {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .sobre {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .breveApresentacao,
+    .descricao .texto {
+        padding: 25px 20px;
+    }
+
+    .TitleLogoDownload h1 {
+        font-size: 38px;
+    }
+
+    .linha2 img {
+        width: 35px;
+        height: 35px;
+    }
+}
